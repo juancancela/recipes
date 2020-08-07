@@ -4,11 +4,13 @@ import {AppContext} from '../AppContext';
 
 const Wrapper = styled.div`
   display: grid;
+  grid-template-columns: 1fr;
+  padding-bottom: 50px;
 
   input {
     height: 100px;
-    font-size: 60px;
-    padding: 10px;
+    font-size: 50px;
+    padding: 20px;
   }
 `;
 
@@ -16,12 +18,11 @@ export default function SearchBar() {
   const {state, setSearchTerm} = useContext(AppContext);
   const {isMobile, searchTerm} = state;
 
-  console.log('searchTerm => ', searchTerm);
   return (
     <Wrapper>
       <input
         type="text"
-        placeholder="Ingresar Ingrediente..."
+        placeholder="Type ingredient..."
         onChange={(e) => setSearchTerm(e.target.value)}
       />
     </Wrapper>

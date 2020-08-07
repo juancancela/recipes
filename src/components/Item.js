@@ -1,10 +1,16 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import styled from 'styled-components';
 import {AppContext} from '../AppContext';
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 150px 100px;
+  grid-template-columns: 1fr 2fr;
+
+  a {
+    text-decoration: underline;
+    color: black;
+    font-weight: bolder;
+  }
 `;
 
 export default function Item(props) {

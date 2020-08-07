@@ -11,7 +11,7 @@ const Routes = () => {
       <App>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/details" component={DetailsPage} />
+          <Route exact path="/details/:id" component={DetailsPage} />
         </Switch>
       </App>
     </AppContextProvider>
